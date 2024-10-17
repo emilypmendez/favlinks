@@ -15,13 +15,13 @@ function App() {
   return (
     <>
       <h1>Submit your fav links!</h1>
+      <p className="read-the-docs">
+          Type in the name of the link and the URL of the link you want to add to the table. 
+      </p>
       <div className="card">
         <Form onNewSubmission={handleNewSubmission} />
         <br />
-        
-        <p className="read-the-docs">
-          <Table links={favLinks}/>
-        </p>
+        <Table links={favLinks}/>
       </div>
     </>
   )

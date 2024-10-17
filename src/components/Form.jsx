@@ -1,11 +1,16 @@
 // FORM COMPONENT
 
 import { useState } from 'react'
+import PropTypes from 'prop-types'
 
-function Form(props) {
+function Form( props ) {
 
     const [linkName, setLinkName] = useState(''); // This is a placeholder for now
     const [linkURL, setLinkURL] = useState(''); // This is a placeholder for now
+
+    Form.propTypes = {
+        onNewSubmission: PropTypes.func.isRequired,
+    }
 
     let handleSubmit = (event) => {
         event.preventDefault()

@@ -1,6 +1,12 @@
 // TABLE COMPONENT
 
+import PropTypes from 'prop-types'
+
 function Table(props) {
+
+    Table.propTypes = {
+        links: PropTypes.array.isRequired,
+    }
 
     const rows = props.links.map((row, index) => {
         return (
@@ -12,6 +18,7 @@ function Table(props) {
     })
 
     return (
+        <>
         <table>
             <thead>
                 <tr>
@@ -23,6 +30,7 @@ function Table(props) {
                 {rows}
             </tbody>
         </table>
+        </>
     )
 }
 
